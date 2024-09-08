@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2F2F2;
+}
+
+.container {
+    max-width: 400px;
+    height: 100%;
+    padding: 1rem 2rem;
+    background-color: #1C1917;
+    
+}
+
+.container .avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.container .avatar img {
+    max-width: 150px;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.container .avatar h1 {
+    font-size: 2.25rem;
+    color: #F2F2F2;
+    font-weight: bold;
+}
+
+.container .avatar h4 {
+    color: #15803D;
+    font-size: 1rem;
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+}
+
+.container .socials {
+    margin: 0 auto;
+}
+
+.container .socials a {
+    display: block;
+    padding: 12px 0;
+    width: 100%;
+    background-color: #545454;
+    font-size: 1rem;
+    color: #F2F2F2;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    transition: all .6s;
+}
+
+.container .socials a:hover {
+    background-color: #15803D;
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+	.container, .container .avatar img {
+		width: 90%;
+	}
+}
+@media all and (min-width: 768px) and (max-width: 1024px) {
+	.container {
+		width: 95%;
+	}
+}
+
+@media all and (max-width: 480px) {
+	.container, .container .avatar img  {
+		width: 80%;
+	}
+
+	.container .avatar h1 {
+		font-size: 1.25rem;
+	}
+
+    .container .avatar h4 {
+        font-size: 0.75rem;
+    }
+}
