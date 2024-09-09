@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto Mono", monospace;
+    color: #F2F2F2;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 450px;
+    height: 100%;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: #1C1917;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form .form_name {
+    display: flex;
+    transition: all 0.6s;
+}
+
+form label {
+    font-size: 1rem;
+    font-weight: normal;
+    transition: all 0.6s;
+}
+
+form input {
+    border: none;
+    color: #F2F2F2;
+    background-color: #545454;
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    transition: all 0.6s;
+}
+
+form textarea {
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    border: none;
+    border-radius: 8px;
+    resize: none;
+    outline: none;
+    color: #F2F2F2;
+    background-color: #545454;
+    margin-bottom: 0.75rem;
+    padding: 0.75rem;
+    transition: all 0.6s;
+}
+
+form textarea:focus {
+    border: none;
+}
+
+form button {
+    align-self: flex-end;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    color: #F2F2F2;
+    background-color: #15803D;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+
+form button:hover {
+    background-color: #22C55E;
+    color: #1C1917;
+}
+
+@media all and (max-width: 480px) {
+    .container {
+        width: 90%;
+    }
+
+    form .form_name,
+    form .form_name input,
+    form .form_name label {
+        display: block;
+        width: 100%;
+    }
+}
+
