@@ -1,3 +1,23 @@
+:root {
+    --background-dark: #292524;
+    --text-color-dark: #F2F2F2;
+    --card-bg-dark: #292524;
+    
+    --background-light: #F2F2F2;
+    --text-color-light: #292524;
+    
+    --background-color: var(--background-dark);
+    --color: var(--text-color-dark);
+    --card-bg: var(--card-bg-dark);
+}
+
+.light {
+    --background-color: var(--background-light);
+    --color: var(--text-color-light);
+    --card-bg: #292524;
+
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,9 +29,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #292524;
+    background-color: var(--background-color);
     font-family: "Roboto Mono", monospace;
-    color: #F2F2F2;
+    color: var(--color);
+    /* transition: background-color 0.3s, color 0.3s; */
+    transition: all 0.3s, color 0.3s;
 }
 
 .icon {
@@ -62,7 +84,7 @@ body {
     width: 100%;
     border-radius: 8px;
     padding: 1rem;
-    background-color: #1C1917;
+    background-color: var(--card-bg);
     margin-bottom: 1rem;
 }
 
