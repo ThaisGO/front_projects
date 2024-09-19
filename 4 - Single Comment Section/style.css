@@ -1,20 +1,33 @@
 :root {
     --background-dark: #292524;
     --text-color-dark: #F2F2F2;
-    --card-bg-dark: #292524;
+    --text-green-dark: #22C55E;
+    --card-bg-dark: #1C1917;
+    --input-bg-dark: #545454;
     
-    --background-light: #F2F2F2;
-    --text-color-light: #292524;
+    /* --background-light: #F2F2F2; */
+    --background-light: #D9D9D9;
+    --text-color-light: #1C1917;
+    /* --text-green-light: #15803D; */
+    --text-green-light: #22C55E;
+    /* --card-bg-light: #D9D9D9; */
+    --card-bg-light: #F2F2F2;
+    --input-bg-light: #F2F2F2;
     
+    /* Dark Theme */
     --background-color: var(--background-dark);
     --color: var(--text-color-dark);
+    --color-green: var(--text-green-dark);
     --card-bg: var(--card-bg-dark);
+    --input-bg: var(--input-bg-dark);
 }
 
 .light {
     --background-color: var(--background-light);
     --color: var(--text-color-light);
-    --card-bg: #292524;
+    --color-green: var(--text-green-light);
+    --card-bg: var(--card-bg-light);
+    --input-bg: var(--input-bg-light);
 
 }
 
@@ -32,8 +45,19 @@ body {
     background-color: var(--background-color);
     font-family: "Roboto Mono", monospace;
     color: var(--color);
-    /* transition: background-color 0.3s, color 0.3s; */
     transition: all 0.3s, color 0.3s;
+}
+
+.theme {
+    font-size: 1rem;
+    padding: 1rem 0;
+    align-self: flex-end;
+    color: var(--color-green);
+    cursor: pointer;
+}
+
+.icon-theme{
+    font-size: 0.5rem;
 }
 
 .icon {
@@ -42,9 +66,7 @@ body {
 
 .container {
     max-width: 1440px;
-    width: 100%;
     height: 100%;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,13 +77,13 @@ body {
     align-items: center;
     max-width: 650px;
     width: 100%;
-    background-color: #545454;
+    background-color: var(--input-bg);
     margin-bottom: 2rem;
     padding: 0.75rem;
     transition: all 0.6s;
     border-radius: 8px;
-    color: rgba(34, 197, 94, .8);
-    font-size: 0.5rem;
+    color: var(--color-green);
+    font-size: 0.75rem;
 }
 
 .comment_input textarea {
@@ -70,7 +92,7 @@ body {
     border: none;
     resize: none;
     outline: none;
-    color: rgba(34, 197, 94, .8);
+    color: var(--color-green);
     background-color: transparent;
 
 }
@@ -100,14 +122,14 @@ body {
 }
 
 .card_head h2 {
-    color: #22C55E;
+    color: var(--color-green);
     font-size: 1.5rem;
     font-weight: 500;
     margin-left: 8px;
 }
 
 .card_head span {
-    color: #22C55E;
+    color: var(--color-green);
     margin-left: auto;
     font-size: 0.75rem;
     font-weight: 200;
@@ -121,7 +143,7 @@ body {
 }
 
 .card_footer {
-    color: #22C55E;
+    color: var(--color-green);
     font-size: 0.5rem;
 }
 @media all and (min-width: 480px) and (max-width: 768px),
